@@ -1,30 +1,18 @@
 import React from 'react';
 import './App.css';
+import NavBar from './view/common/Navbar/NavBar';
+import MainContent from './view/common/MainContent/MainContent';
+import Footer from './view/common/Footer/Footer';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
     <div>
-      <h1 className={"text-6xl text-red-500"}>This is App.js</h1>
-
-      <div style={{
-          backgroundColor: "red",
-          padding: 10,
-          textAlign: "center"}}>
-          Inline CSS Box</div>
-
-        <br/>
-
-        <div className="box">
-            External CSS Box
-        </div>
-
-        <br/>
-
-        <div className="bg-red-500
-                   p-3
-                   text-center">
-            Utility CSS Box
-        </div>
+       <BrowserRouter>
+          <NavBar/>
+          <MainContent/>
+          <Footer/>
+       </BrowserRouter>
     </div>
   );
 }
