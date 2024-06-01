@@ -1,4 +1,3 @@
-import { features } from 'node:process'
 import React, { Component } from 'react'
 import {Route,Routes} from 'react-router-dom' 
 import About from '../../pages/About/About'
@@ -9,8 +8,6 @@ export default class MainContent extends Component {
   render() {
     return (
       <div className='md:px-12 max-2x1 mx-auto '>
-
-        {/* <h1 className='text-tertiary text-center'>This Main Content</h1> */}
 
           <Routes>
               <Route path="/" Component={Home}></Route>

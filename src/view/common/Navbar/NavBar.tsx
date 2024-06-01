@@ -26,7 +26,8 @@ export default class NavBar extends Component {
         <div>
          <button type="submit" className="flex w-full justify-center rounded-md bg-green-400 px-3 py-1.5 text-sm font-semibold leading-6 text-black shadow-sm
                 hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                onClick={onSingInClick}>Sign in
+                >
+                  <Link to={'/Login'}>Sign in</Link> 
           </button>
         </div>
 

@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import DefaultLayout from './view/common/DefaultContent/DefaultLayout';
-import { Login } from './view/pages/Login/Login';
+import  Login from './view/pages/Login/Login';
 
 function App() {
   return (

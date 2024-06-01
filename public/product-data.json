@@ -1,0 +1,18 @@
+[
+    {
+        "id":1,
+        "name": "Laptop",
+        "price": "20000",
+        "currency": "LKR",
+        "image": "laptop.png"
+    },
+
+    {
+        "id":2,
+        "name": "phone",
+        "price": "10000",
+        "currency": "LKR",
+        "image": "laptop.png"
+    }
+]
+
