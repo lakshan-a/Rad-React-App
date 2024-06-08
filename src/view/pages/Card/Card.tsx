@@ -1,7 +1,23 @@
 import React, { Component } from 'react'
 import image from '../../../images/laptop.png'
 
-export default class card extends Component {
+interface ProductProps{
+  data: any;
+}
+
+interface productStart{
+isActive: boolean
+}
+
+export default class card extends Component <ProductProps,productStart>{
+
+  constructor (props:ProductProps){
+    super(props);
+    this.state ={
+      isActive:false
+    }
+  }
+
   render() {
     return (
         <div
@@ -65,6 +81,7 @@ export default class card extends Component {
         <a
           href="#"
           className="rounded-lg bg-cyan-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-cyan-800 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
+          onClick={this.addToCartOnClick}
         >
           Add to cart
         </a>
@@ -72,4 +89,14 @@ export default class card extends Component {
     </div>
     )
   }
+
+  private addToCartOnClick = () => {
+    this.setState({
+      isActive:true
+    },
+    () => {
+      alert(this.state.isActive);
+    });
+  }
+
 }
