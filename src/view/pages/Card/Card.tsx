@@ -20,6 +20,9 @@ export default class card extends Component <ProductProps,productStart>{
   }
 
   render() {
+
+    const {data} = this.props;
+
     return (
         <div
       className="max-w-sm  bg-[#444445] rounded-lg ms-4 mt-4"
@@ -82,7 +85,10 @@ export default class card extends Component <ProductProps,productStart>{
         {
           this.state.isActive ?
           
-          <ModifyCart/>
+          <ModifyCart data={{
+            product: data, 
+            isAdded:this.state.isActive}}
+          />
           :
           <a
           href="#"

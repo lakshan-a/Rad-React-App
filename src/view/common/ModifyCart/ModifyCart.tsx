@@ -1,8 +1,14 @@
 import React, { Component } from 'react'
-import CartItems from '../../../Models/CartItems';
+import { Console } from 'console';
+// import { CartItems } from '../../../Models/CartItems';
+import { CartItems } from '../../../Models/CartItems';
 
 
 interface ModifyCartProps{
+
+    data : any
+
+
 
 }
 interface ModifyCardState{
@@ -12,7 +18,7 @@ interface ModifyCardState{
 
 export default class ModifyCart extends Component<ModifyCartProps,ModifyCardState> {
 
-  public static itemList: CartItems[] = [];
+    public static itemsList: CartItems[] = []
 
     constructor(props:ModifyCartProps){
         super(props);
@@ -21,6 +27,25 @@ export default class ModifyCart extends Component<ModifyCartProps,ModifyCardStat
         }
     }
  
+    componentDidMount(): void {
+        const {itemCount} = this.state;
+    
+        if(this.props.data.isAdded)
+        if(!ModifyCart.itemsList.find(item  => item.product.id == this.props.data.product.id)){
+         
+        ModifyCart.itemsList.push({
+            product: this.props.data.product,
+            itemCount: itemCount
+        })
+        }
+
+        console.log(ModifyCart)
+      }
+
+      componentDidUpdate(prevProps: Readonly<ModifyCartProps>, prevState: Readonly<ModifyCardState>, snapshot?: any): void {
+          let {itemCount:number} = this.state;
+          let item = ModifyCart.itemsList.find(item => item.product.id === this.props.data.product.id);
+      }
     
 
   render() {
@@ -36,17 +61,20 @@ export default class ModifyCart extends Component<ModifyCartProps,ModifyCardStat
     }
 
     const decreaseItemCount = ()=>{
-      if(itemCount>1){
-        this.setState({
-            itemCount: --itemCount
-           })
-      }else{
-          alert('Iteam Count can\' be less than one')
-      }
+
+        if(itemCount>1){
+            this.setState({
+                itemCount: --itemCount
+               })
+        }else{
+            alert('Iteam Count can\' be less than one')
+        }
+
+      
         // alert('remove');
 
     }
-
+  
 
     return (
         <div className='w-full  p-[2.4px] text-center ml-'> 
