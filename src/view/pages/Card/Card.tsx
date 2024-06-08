@@ -81,6 +81,7 @@ export default class card extends Component <ProductProps,productStart>{
         <span className="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
         {
           this.state.isActive ?
+          
           <ModifyCart/>
           :
           <a
