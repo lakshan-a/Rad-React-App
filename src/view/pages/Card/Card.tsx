@@ -78,13 +78,23 @@ export default class card extends Component <ProductProps,productStart>{
       </div>
       <div className="flex items-center justify-between m-5">
         <span className="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
-        <a
+        {
+          this.state.isActive ?
+          <div className='w-full  p-[2.4px] text-center ml-12'> 
+
+          <button className=" text-[8px bg-white] bg-yellow-300 rounded-lg h-6 w-8"> - </button>
+          <small className="text-[20px]"> 1 </small>
+          <button className=" text-[8px bg-white] bg-yellow-300 rounded-lg h-6 w-8"> + </button>
+
+          </div>
+          :
+          <a
           href="#"
           className="rounded-lg bg-cyan-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-cyan-800 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
           onClick={this.addToCartOnClick}
         >
           Add to cart
-        </a>
+        </a>}
       </div>
     </div>
     )
@@ -93,10 +103,12 @@ export default class card extends Component <ProductProps,productStart>{
   private addToCartOnClick = () => {
     this.setState({
       isActive:true
-    },
-    () => {
-      alert(this.state.isActive);
-    });
+    }
+    // ,
+    // () => {
+    //   alert(this.state.isActive);
+    // }
+  );
   }
 
 }

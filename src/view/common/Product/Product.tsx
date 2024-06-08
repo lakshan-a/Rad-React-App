@@ -84,7 +84,13 @@ export default class Product extends Component<ProductProps,productStart> {
         </div>
         <div className="flex items-center justify-between m-5">
           <span className="text-3xl font-bold text-gray-900 dark:text-white">{data.currency}</span>
-          <a
+          {
+
+            this.state.isActive ? 
+                <div className='w-full mt-1 p-[2.4px] text-[8px] text-center'></div>
+                :
+
+            <a
             href="#"
             className="rounded-lg bg-cyan-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-cyan-800 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
             onClick={this.addToCartOnClick}
@@ -92,6 +98,7 @@ export default class Product extends Component<ProductProps,productStart> {
           >
             Add to cart
           </a>
+          }
         </div>
       </div>
     )
