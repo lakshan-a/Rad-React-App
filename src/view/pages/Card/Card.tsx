@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import image from '../../../images/laptop.png'
+import ModifyCart from '../../common/ModifyCart/ModifyCart';
 
 interface ProductProps{
   data: any;
@@ -80,13 +81,7 @@ export default class card extends Component <ProductProps,productStart>{
         <span className="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
         {
           this.state.isActive ?
-          <div className='w-full  p-[2.4px] text-center ml-12'> 
-
-          <button className=" text-[8px bg-white] bg-yellow-300 rounded-lg h-6 w-8"> - </button>
-          <small className="text-[20px]"> 1 </small>
-          <button className=" text-[8px bg-white] bg-yellow-300 rounded-lg h-6 w-8"> + </button>
-
-          </div>
+          <ModifyCart/>
           :
           <a
           href="#"
