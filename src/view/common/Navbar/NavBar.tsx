@@ -21,6 +21,8 @@ export default class NavBar extends Component {
             <li className='inline-block mr-5 text-[#fff] cursor-pointer hover:text-green-400'><Link to='/'>Home</Link> </li>
             <li className='inline-block mr-5 text-[#fff] cursor-pointer hover:text-green-400'><Link to='/about'>About</Link></li>
             <li className='inline-block mr-5 text-[#fff] cursor-pointer hover:text-green-400'><Link to='/contact'>Contact</Link></li>
+            <li className='inline-block mr-5 text-[#fff] cursor-pointer hover:text-green-400'><Link to='/shopping-cart'>My-Cart</Link></li>
+
         </ul>
         <div>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 mt-2 mr-3 text-[#fff]" >

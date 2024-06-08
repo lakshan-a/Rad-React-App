@@ -1,11 +1,9 @@
 export interface ProductModel {
-        
-        "id":number,
+    
+        "id": number,
         "name": String,
         "price": number,
         "currency": String,
         "image": String
-    
 
 }
-

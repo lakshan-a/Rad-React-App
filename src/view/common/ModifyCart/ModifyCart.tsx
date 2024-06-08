@@ -8,8 +8,6 @@ interface ModifyCartProps{
 
     data : any
 
-
-
 }
 interface ModifyCardState{
     itemCount : number 
@@ -39,12 +37,22 @@ export default class ModifyCart extends Component<ModifyCartProps,ModifyCardStat
         })
         }
 
-        console.log(ModifyCart)
+        console.log(ModifyCart.itemsList)
       }
 
       componentDidUpdate(prevProps: Readonly<ModifyCartProps>, prevState: Readonly<ModifyCardState>, snapshot?: any): void {
-          let {itemCount:number} = this.state;
+          const {itemCount} = this.state;
           let item = ModifyCart.itemsList.find(item => item.product.id === this.props.data.product.id);
+
+          if(item){
+            let index = ModifyCart.itemsList.indexOf(item);
+            ModifyCart.itemsList.splice(index,1);
+
+            ModifyCart.itemsList.push({
+              product: this.props.data.product,
+              itemCount: itemCount
+            });
+          }
       }
     
 

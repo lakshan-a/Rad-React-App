@@ -1,9 +1,9 @@
-import Product from '../view/common/Product/Product'
+import { ProductModel } from './ProductModel'
 
 
 export interface CartItems{
 
-    product: Product,
+    product: ProductModel,
     itemCount : number
 }
 

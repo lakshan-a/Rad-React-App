@@ -27,7 +27,7 @@ export default class Home extends Component {
      this.setState({data:jsonData});
 
     }catch (error){
-      console.error('Erroe Fetching Data', error);
+      // console.error('Erroe Fetching Data', error);
     }
 
   }
