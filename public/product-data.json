@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "JBL Headphones",
+    "price": "13,000",
+    "currency": "LKR",
+    "image": "jbl-headphones.png"
+  },
+  {
+    "id": 2,
+    "name": "SOLSTAR 32 HD Smart TV ",
+    "price": "50,000",
+    "currency": "LKR",
+    "image": "Smart-TV.png"
+  },
+  {
+    "id": 3,
+    "name": "vivo v11 pro",
+    "price": "30,000",
+    "currency": "LKR",
+    "image": "vivo.png"
+  },
+  {
+    "id": 4,
+    "name": "Apple Watch Series 3",
+    "price": "150,000",
+    "currency": "LKR",
+    "image": "Watch.png"
+  },
+  {
+    "id": 5,
+    "name": "MacBook Pro 13-inch",
+    "price": "550,000",
+    "currency": "LKR",
+    "image": "MacBook.png"
+  },
+  {
+    "id": 6,
+    "name": "ipad-pro",
+    "price": "350,000",
+    "currency": "LKR",
+    "image": "ipad.png"
+  }
+]
