@@ -12,29 +12,29 @@ export class ShoppingCart extends Component<ShoppingCartProps> {
                 justify-center
                 items-center
                 min-h-screen">
-                <table className="w-full mx-6">
+                <table className="w-full mx-4">
                     <tr className="bg-gray-400">
-                        <th className="text-[9px]
+                        <th className="text-[20px]
                                 font-normal
                                 border-black
                                 border-[0.5px]
                                 px-1">Id</th>
-                        <th className="text-[9px]
+                        <th className="text-[20px]
                                 font-normal
                                 border-black
                                 border-[0.5px]
                                 px-1">Name</th>
-                        <th className="text-[9px]
+                        <th className="text-[20px]
                                 font-normal
                                 border-black
                                 border-[0.5px]
                                 px-1">Unit Price</th>
-                        <th className="text-[9px]
+                        <th className="text-[20px]
                                 font-normal
                                 border-black
                                 border-[0.5px]
                                 px-1">Quantity</th>
-                        <th className="text-[9px]
+                        <th className="text-[20px]
                                 font-normal
                                 border-black
                                 border-[0.5px]
@@ -60,12 +60,12 @@ export class ShoppingCart extends Component<ShoppingCartProps> {
                                 <tr className="border-black
                                                border-[0.5px]
                                                px-1">
-                                    <td className="text-[9px] border-black border-[0.5px] px-1">{item.product.id}</td>
-                                    <td className="text-[9px] border-black border-[0.5px] px-1">{item.product.name}</td>
-                                    <td className="text-[9px] border-black border-[0.5px] px-1">{item.product.price + ' '
+                                    <td className="text-[20px] border-black border-[0.5px] px-1">{item.product.id}</td>
+                                    <td className="text-[20px] border-black border-[0.5px] px-1">{item.product.name}</td>
+                                    <td className="text-[20px] border-black border-[0.5px] px-1">{item.product.price + ' '
                                         + item.product.currency}</td>
-                                    <td className="text-[9px] border-black border-[0.5px] px-1">{item.itemCount}</td>
-                                    <td className="text-[9px] border-black border-[0.5px] px-1">{(item.itemCount * item.product.price)
+                                    <td className="text-[20px] border-black border-[0.5px] px-1">{item.itemCount}</td>
+                                    <td className="text-[20px] border-black border-[0.5px] px-1">{(item.itemCount * item.product.price)
                                         + ' ' + item.product.currency}</td>
                                 </tr>
                             ))

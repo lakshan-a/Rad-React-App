@@ -15,7 +15,7 @@ export class ModifyCart extends Component<ModifyCartProps, ModifyCartState> {
     constructor(props: ModifyCartProps) {
         super(props);
         this.state = {
-            itemCount: 1
+            itemCount: 0
         }
     }
 
@@ -80,7 +80,7 @@ export class ModifyCart extends Component<ModifyCartProps, ModifyCartState> {
         const decreaseItemCount =
             () => {
             // alert('Remove')
-                if (itemCount > 1) {
+                if (itemCount > 0) {
                     this.setState({
                         itemCount: --itemCount
                     })
@@ -94,7 +94,7 @@ export class ModifyCart extends Component<ModifyCartProps, ModifyCartState> {
             <div className='  p-[2px] text-center '> 
 
         <button className=" text-[8px bg-white] bg-yellow-300 rounded-lg h-7 w-8" onClick={decreaseItemCount}> - </button>
-        <small className="text-[20px]"> {this.state.itemCount} </small>
+        <small className="text-[20px] dark:text-white"> {this.state.itemCount} </small>
         <button className=" text-[8px bg-white] bg-yellow-300 rounded-lg h-7 w-8" onClick={increaseItemCount}> + </button>
 
         </div>
